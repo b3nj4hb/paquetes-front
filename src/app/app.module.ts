@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { ReportesComponent } from './reportes/reportes.component';
 import { ReservaComponent } from './reserva/reserva.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

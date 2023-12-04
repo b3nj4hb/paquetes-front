@@ -1,0 +1,84 @@
+<div class="relative overflow-x-auto m-14 rounded-lg">
+    <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
+        <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+            <tr>
+                <th scope="col" class="px-6 py-3">
+                    # Reserva
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Paquete
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Cliente
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Fecha
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Cantidad
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    TipoPago
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    TotalVenta
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Descuento
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    TotalNeto
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Confirmado
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    Anulado
+                </th>
+                <th scope="col" class="px-6 py-3">
+                    CodEmpleado
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let r of reservas" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                <td class="px-6 py-4">
+                    # {{r.idreserva}}
+                </td>
+                <td class="px-6 py-4">
+                    {{r.idpaquete?.nombre}} - {{r.idpaquete?.iddestino?.ciudad}}
+                </td>
+                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                    {{r.idcliente?.nombres}} {{r.idcliente?.apellidos}}
+                </th>
+                <td class="px-6 py-4">
+                    {{r.fecha}}
+                </td>
+                <td class="px-6 py-4">
+                    {{r.cantidad}}
+                </td>
+                <td class="px-6 py-4">
+                    {{r.tipopago}}
+                </td>
+                <td class="px-6 py-4">
+                    {{r.totalventa}}
+                </td>
+                <td class="px-6 py-4">
+                    {{r.descuento}}
+                </td>
+                <td class="px-6 py-4">
+                    {{r.totalneto}}
+                </td>
+                <td class="px-6 py-4">
+                    {{r.confirmado}}
+                </td>
+                <td class="px-6 py-4">
+                    {{r.anulado}}
+                </td>
+                <td class="px-6 py-4">
+                    {{r.codempleado?.nombrec}} - {{r.codempleado?.codempleado}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
